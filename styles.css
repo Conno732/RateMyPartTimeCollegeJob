@@ -11,11 +11,25 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
 li {
+    flex: 1 1 auto;
     display: inline;
+
 }
+
+#foot {
+    flex:initial;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -34,6 +48,7 @@ body {
     align-items: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    padding-left: 30px;
     
 
 }
@@ -115,7 +130,10 @@ body {
     font-size: medium;
 }
 
-
+.search-container {
+    display:flex;
+    align-items: center;
+}
 
 
 .forms {
@@ -127,10 +145,14 @@ body {
 }
 
 .form {
-    width: 40%;
+    width: 60%;
     padding: 10px;
     flex-flow: row;
 
+}
+
+#ulforms {
+    padding: 10px;
 }
 
 .label {
@@ -158,5 +180,33 @@ footer {
     text-align: center;
     width: fill;
 
+}
+
+#search {
+    width: 95%;
+    margin: 0px;
+    border-radius: 10px;
+
+}
+
+.padding {
+    padding: 10px;
+}
+
+.spyglass{
+    width: 100%;
+}
+
+#searchSubmit{
+    border-radius: 10px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+#searchSubmit :hover {
+    background-color: rosybrown;
+}
+#searchSubmit :active {
+    background-color: brown;
 }
 
