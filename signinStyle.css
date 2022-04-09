@@ -1,0 +1,58 @@
+html {
+    min-height: 100%;
+    background: rgb(110,106,179);
+    background: linear-gradient(330deg, rgba(110,106,179,1) 0%, rgba(170,185,189,1) 39%, rgba(0,212,255,1) 100%);
+
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    text-align: center;
+
+}
+
+
+.loginItem {
+    text-align: center;
+    font-size: 50px;
+    height: 72px;
+    margin: 10px;
+}
+
+.inputContainer {
+    
+    border-radius: 10px;
+    background: beige;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    padding: 15px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.usernameText{
+    text-align: left;
+}
+
+label {
+    text-align: right;
+}
+
+input[type=text], input[type=password] {
+    text-align: left;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button{
+    font-size: 25px;
+}
