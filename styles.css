@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+
+.header {
+    height: 72px;
+    box-shadow: 3px 5px 30px rgba(0,0,0.06);
+    background: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.headItem {
+    margin: 25px;
+}
+
+.sidebar {
+    
+}
