@@ -1,12 +1,6 @@
 import { networkProtocols } from "./networkProtocols.js";
 let network;
 
-if (document.getElementById("queryData")) {
-  document.getElementById("queryData").addEventListener("click", () => {
-    network.downloadPostings();
-  });
-}
-
 if (document.getElementById("createPost")) {
   document.getElementById("createPost").addEventListener("click", () => {
     window.location.href = "./createPost.html";
@@ -17,18 +11,16 @@ if (document.getElementById("submitPost")) {
   document.getElementById("submitPost").addEventListener("click", () => {
     const title = document.getElementById("title");
     const company = document.getElementById("company");
-    const pay = document.getElementById("pay");
     const location = document.getElementById("location");
     const tag = document.getElementById("tag");
-    const stars = document.getElementById("stars");
+    const description = document.getElementById("description");
     //Make sure data is valid
     network.createPosting(
       company.value,
       title.value,
       tag.value,
       location.value,
-      pay.value,
-      stars.value
+      description.value
     );
   });
 }
@@ -56,6 +48,14 @@ if (document.getElementById("password2")) {
 
 function start() {
   network = new networkProtocols();
+  if (document.getElementById("jobPostFlag")) {
+    network.downloadPost();
+    // const reviews = data.reviews;
+    //console.log(reviews);
+  }
+  if (document.getElementById("queryData")) {
+    network.downloadPostings();
+  }
 }
 
 start();
