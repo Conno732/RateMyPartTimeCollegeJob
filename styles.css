@@ -6,8 +6,7 @@
 
 html {
     min-height: 100%;
-    background: ghostwhite;
-
+    background: lightgray;
 
 }
 
@@ -61,6 +60,7 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding-left: 30px;
+    flex-flow: row;
 
 }
 
@@ -68,7 +68,7 @@ body {
 .headItem {
     padding: 0.25em;
     margin: 2em;
-    margin-right: 2em;
+
     border: 1px solid rgb(0, 0, 0);
     border-radius:5px;
     background-color: ghostwhite;
@@ -84,6 +84,10 @@ body {
     flex-grow: 1;
     
     
+}
+
+.header .content {
+    justify-content: right;
 }
 
 .sidebar {
@@ -137,6 +141,7 @@ body {
     justify-content: space-between;
 
 }
+
 
 .postFoot {
     align-self: center;
@@ -204,6 +209,7 @@ body {
 .label input[type=submit] {
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 textarea {
@@ -252,10 +258,12 @@ footer {
     border-radius: 10px;
     border-width: 0px;
     cursor: pointer;
+    padding:0;
 }
 
 #searchSubmit :hover {
     background-color: rosybrown;
+    border-radius:inherit;
 }
 #searchSubmit :active {
     background-color: brown;
