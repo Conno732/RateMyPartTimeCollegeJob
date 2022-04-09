@@ -28,7 +28,10 @@ if (document.getElementById("password2")) {
     const username = document.getElementById("username");
     const password = document.getElementById("password");
     const password2 = document.getElementById("password2");
-    if (password.value === password2.value) {
+    if (
+      password.value === password2.value &&
+      username.value.substring(username.value.length - 3) === "edu"
+    ) {
       network.setEmailPassword(username.value, password.value);
       network.createAccount();
     } else {
