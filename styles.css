@@ -1,25 +1,40 @@
 html {
     min-height: 100%;
-    background: rgb(110,106,179);
-    background: linear-gradient(330deg, rgba(110,106,179,1) 0%, rgba(170,185,189,1) 39%, rgba(0,212,255,1) 100%);
+    background: white;
 
+
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
 }
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     flex-flow: column;
+    height: 100
+    
 }
 
 .header {
     height: 72px;
     box-shadow: 3px 5px 30px rgba(0,0,0.06);
-    background: green;
+    background-color: rgba(5, 114, 134, 0.75);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    
 
 }
 
@@ -41,21 +56,28 @@ body {
     margin-top: 30px;
     flex-grow: 1;
     
+    
 }
 
 .sidebar {
-    border-radius: 50px;
+    position: sticky;
+    top: 20px;
+    border-radius: 10px;
     background: rgb(119, 119, 119);
     padding: 15px;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 100%;
+   margin-right: 10px;
 }
 
 .postings {
+    border-radius: 10px;
+    background-color: rgba(5, 114, 134, 0.75);
+    
     display: flex;
-    flex-flow: column;
-    padding-top: 15px;
+    flex-flow: column;  
+    padding: 20px;
     padding-left: 15px;
     width: auto;
 
@@ -71,7 +93,7 @@ body {
     width: 1000px;
     margin-bottom: 5px;
     padding: 10px;
-    border: 1px dashed rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0.06);
     border-radius: 10px;
     font-size: x-large;
     flex-flow: column;
@@ -93,12 +115,9 @@ body {
 }
 
 
-input[type = "text"] {
-    width: 100%;
-}
+
 
 .forms {
-    display: flex;
     margin-top: 1%;
     width: 100%;
     display: flex;
@@ -113,8 +132,8 @@ input[type = "text"] {
 
 }
 
-.textTitle {
-    text-align: center;
+.label {
+    font-size: 15pt;
 }
 
 textarea {
@@ -122,6 +141,21 @@ textarea {
     box-sizing: border-box;
 }
 
+input[type=text], input[type=password], textarea {
+    text-align: left;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+}
 
 
+footer {
+    background-color: grey;
+    text-align: center;
+    width: fill;
+
+}
 
