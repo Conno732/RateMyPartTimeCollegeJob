@@ -164,6 +164,11 @@ body {
     font-size: 15pt;
 }
 
+.label textarea {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12pt;
+}
+
 .label input[type=submit] {
     padding: 10px;
 }
