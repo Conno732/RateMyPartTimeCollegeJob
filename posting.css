@@ -47,8 +47,8 @@ html {
     border-radius: 7px;
     padding: 5px;
     white-space: nowrap;
-    width: 99.5%
-    
+    width: 99.5%;
+    justify-content: space-around;
     
 
 }
@@ -58,6 +58,7 @@ html {
     background-color: ghostwhite;
     margin: 0.5%;
     margin-right: 10px; /* between white box space */
+
     align-items: space-between;
 }
 
