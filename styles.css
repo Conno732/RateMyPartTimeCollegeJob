@@ -1,6 +1,8 @@
 body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     flex-flow: column;
+    background: beige;
 }
 
 .header {
@@ -12,7 +14,7 @@ body {
     align-items: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-
+  
 
 }
 
@@ -20,22 +22,63 @@ body {
     margin: 25px;
 }
 
+.headItem :hover {
+    box-shadow: 3px 3px 5px black;
+    border: 1px solid black;
+}
+
 .content {
+    align-items:stretch;
     display: flex;
     flex-flow: row wrap;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .sidebar {
     border-radius: 100px;
-    background: beige;
+    background: thistle;
     padding: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
 }
 
 .postings {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15px;
+    padding-left: 15px;
+    width: auto;
 
 }
 
-.post {
+.postTitle {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+}
 
+.post {
+    width: 1000px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px dashed rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: x-large;
+    flex-flow: column;
+    
+}
+
+.postings :hover {
+    box-shadow: 3px 3px 5px black;
+}
+.post :hover {
+    box-shadow: 0px 0px 0px black;
+}
+
+
+
+.postBody {
+    padding-left: 10px;
+    font-size: medium;
 }
