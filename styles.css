@@ -57,8 +57,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
     padding-left: 30px;
     flex-flow: row;
 
