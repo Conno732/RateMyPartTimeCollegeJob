@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    flex-flow: column;
 }
 
 .header {
@@ -9,6 +10,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
 
 }
 
@@ -16,6 +20,22 @@ body {
     margin: 25px;
 }
 
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 15px;
+}
+
 .sidebar {
-    
+    border-radius: 100px;
+    background: beige;
+    padding: 15px;
+}
+
+.postings {
+
+}
+
+.post {
+
 }
