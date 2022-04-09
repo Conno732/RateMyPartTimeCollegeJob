@@ -16,16 +16,22 @@ body {
     
     border-radius: 10px;
     background: beige;
+    margin: 300px;
     padding: 15px;
+    box-shadow: 3px 3px 5px black;
 }
 
-.unameText{
+.usernameText{
     text-align: left;
+}
+
+label {
+    text-align: right;
 }
 
 input[type=text], input[type=password] {
     text-align: left;
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
