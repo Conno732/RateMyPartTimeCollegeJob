@@ -19,7 +19,9 @@ body {
     
     border-radius: 10px;
     background: beige;
-    margin: 300px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 150px;
     padding: 15px;
     box-shadow: 3px 3px 5px black;
 }
