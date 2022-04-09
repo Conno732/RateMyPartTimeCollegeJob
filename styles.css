@@ -62,6 +62,25 @@ body {
 
 }
 
+.desc{
+    display:flex;
+    flex-flow: column;
+    padding: 5em;
+
+}
+
+.bios {
+    display:flex;
+    flex-flow: row;
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+.bios > * {
+    margin-left: em;
+}
+
+
 
 .headItem {
     padding: 0.25em;
@@ -271,9 +290,3 @@ footer {
 .stars {
     flex-flow: column;
 }
-
-
-
-
-
-
