@@ -1,6 +1,6 @@
 html {
     min-height: 100%;
-    background: white;
+    background: ghostwhite;
 
 
 }
@@ -19,6 +19,7 @@ ul {
 li {
     flex: 1 1 auto;
     display: inline;
+    padding: 10px;
 
 }
 
@@ -29,7 +30,9 @@ li {
     padding: 10px;
 }
 
-
+.header img{
+    padding-top: 10px;
+}
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -42,7 +45,7 @@ body {
 .header {
     height: 72px;
     box-shadow: 3px 5px 30px rgba(0,0,0.06);
-    background-color: rgba(5, 114, 134, 0.75);
+    background-color: rgba(54, 69, 79);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,11 +78,12 @@ body {
 }
 
 .sidebar {
+    color: ghostwhite;
     width: 33%;
     position: sticky;
     top: 20px;
     border-radius: 10px;
-    background: rgb(119, 119, 119);
+    background: rgba(54, 69, 79);
     padding: 15px;
     justify-content: center;
     align-items: center;
@@ -89,8 +93,8 @@ body {
 
 .postings {
     border-radius: 10px;
-    background-color: rgba(5, 114, 134, 0.75);
-    
+    background-color: rgba(54, 69, 79);
+    color: ghostwhite;
     display: flex;
     flex-flow: column;  
     padding: 20px;
@@ -109,7 +113,7 @@ body {
     width: 90   ;
     margin-bottom: 5px;
     padding: 10px;
-    border: 1px solid rgb(0, 0, 0.06);
+    border: 1px solid ghostwhite;
     border-radius: 10px;
     font-size: x-large;
     flex-flow: column;
@@ -156,7 +160,12 @@ body {
 }
 
 .label {
+    text-align: center;
     font-size: 15pt;
+}
+
+.label input[type=submit] {
+    padding: 10px;
 }
 
 textarea {
@@ -210,3 +219,56 @@ footer {
     background-color: brown;
 }
 
+.stars {
+    flex-flow: column;
+}
+
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;
+  }
+
+  .star-rating input {
+    display: none;
+  }
+  .star-rating > label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: goldenrod;
+  }
+
+  .star-rating label:hover {
+    color: goldenrod;
+    transition: 0.2s ease;
+  }
+  .star-rating label:active::before {
+    transform:scale(1.1);
+  }
+  
+
+  .star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+  }
+
+  .star-rating input:checked ~ label:before {
+    content:'\2605';
+  }
+  
+  @-moz-document url-prefix() {
+    .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+    }
+  }  
