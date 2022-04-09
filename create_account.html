@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="main.js"></script>
+    <script type="module" src="./dist/index.js"></script>
   </head>
   <body>
-    <label for="Name">Name</label>
-    <input type="text" name="Name" />
-    <label for="login">Username</label>
-    <input type="text" name="login" />
+    <label for="login">Email</label>
+    <input type="text" name="login" id="username" />
     <label for="password">Password</label>
-    <input type="text" name="password" />
+    <input type="text" name="password" id="password" />
+    <label for="password2">Type password again</label>
+    <input type="text" name="password2" id="password2" />
     <button id="submit">Create Account</button>
   </body>
 </html>

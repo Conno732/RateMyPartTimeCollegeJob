@@ -1,0 +1,28 @@
+{
+  "name": "ratemyparttimecollegejob",
+  "version": "1.0.0",
+  "description": "The ordering of website interaction.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conno732/RateMyPartTimeCollegeJob.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Conno732/RateMyPartTimeCollegeJob/issues"
+  },
+  "homepage": "https://github.com/Conno732/RateMyPartTimeCollegeJob#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "firebase": "^9.6.10"
+  }
+}
