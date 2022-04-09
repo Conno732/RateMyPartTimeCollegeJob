@@ -1,13 +1,12 @@
 html {
     min-height: 100%;
-    background: rgb(110,106,179);
-    background: linear-gradient(330deg, rgba(110,106,179,1) 0%, rgba(170,185,189,1) 39%, rgba(0,212,255,1) 100%);
+    background: ghostwhite;
 
 }
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
+    color: white;
     text-align: center;
 
 }
@@ -23,7 +22,7 @@ body {
 .inputContainer {
     
     border-radius: 10px;
-    background: beige;
+    background: rgba(54, 69, 79);
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 10%;
@@ -55,4 +54,10 @@ button:hover {
 
 button{
     font-size: 25px;
+}
+
+img{
+    width: 70%;
+    margin: -30%;
+    
 }
