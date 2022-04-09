@@ -61,6 +61,13 @@ html {
     margin-right: 1%; /* between white box space */
 }
 
+.infoItem{
+    font-weight: bold;
+    white-space: nowrap;
+    color: ghostwhite;
+    font-size: 30px;
+    
+}
 
 .infoItemAdjust{
     font-weight: bold;
@@ -70,66 +77,3 @@ html {
     font-size: 30px;
 }
 
-.postings {
-    border-radius: 10px;
-    background-color: rgba(54, 69, 79);
-    color: ghostwhite;
-    display: flex;
-    flex-flow: column;  
-    padding: 20px;
-    padding-left: 15px;
-    width: 66%;
-
-}
-
-.postTitle {
-    display: flex;
-    justify-content: space-between;
-    
-    flex-flow: row;
-}
-
-.post {
-    display: flex;
-    width: 90;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: 1px solid ghostwhite;
-    border-radius: 10px;
-    font-size: x-large;
-    flex-flow: column;
-}
-
-.postHead {
-    display: flex;
-    padding: 10px;
-    flex-flow: row ;
-    justify-content: space-between;
-
-}
-
-.postFoot {
-    align-self: center;
-    font-size: 14pt;
-    text-align: center;
-    width: fit-content;
-    padding-left: 10px;
-
-}
-
-.postFoot :hover {
-    background-color: black;
-    border-radius: 5px;
-}
-
-.postBody {
-    color: rgba(248, 248, 255, .75);
-    padding-left: 10px;
-    font-size: medium;
-}
-
-.postings :hover {
-    border-color: black;
-    border-width: 1.5px;
-    cursor: pointer;
-}
