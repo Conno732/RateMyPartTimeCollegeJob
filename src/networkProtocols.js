@@ -39,11 +39,13 @@ export class networkProtocols {
         // Signed in
         this.UserEmail = userCredential.user.email;
         console.log(userCredential.user.email);
+        window.location.href = "./jobPostings.html";
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log("error");
         // ..
       });
   }
@@ -54,11 +56,13 @@ export class networkProtocols {
         // Signed in
         this.UserEmail = userCredential.user.email;
         console.log(userCredential.user.email);
+        window.location.href = "./jobPostings.html";
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log("error");
       });
   }
 

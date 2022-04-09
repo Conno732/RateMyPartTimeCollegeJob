@@ -20,7 +20,7 @@ if (document.getElementById("password2")) {
       console.log("wrong!!!");
     }
   });
-} else {
+} else if (document.getElementById("submit")) {
   document.getElementById("submit").addEventListener("click", () => {
     const username = document.getElementById("username");
     const password = document.getElementById("password");
@@ -33,8 +33,6 @@ function start() {
   network = new networkProtocols();
 }
 
-function displayJobPostings() {
-  window.location.href = "./";
-}
+function displayJobPostings() {}
 
 start();
