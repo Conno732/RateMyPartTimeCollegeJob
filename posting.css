@@ -1,0 +1,58 @@
+html {
+    min-height: 100%;
+    background: ghostwhite;
+
+
+}
+
+.header {
+    height: 75px;
+    background-color: rgba(54, 69, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding-left: 30px;
+    
+
+}
+
+.information {
+    display: flex;
+    height: 75px;
+    background-color: rgba(54, 69, 79);
+    border-radius: 7px;
+    padding-left: 30px;
+    padding-top: 30px;
+    white-space: nowrap;
+    flex-flow: row;
+    
+
+}
+
+
+.headItem {
+    margin-top: 40%;
+    margin-bottom: 40%;
+    text-align: center;
+}
+
+.headItem :hover {
+    box-shadow: 3px 3px 5px black;
+    border: 1px solid rgb(0, 0, 0);
+    
+}
+
+.infoItem{
+    white-space: nowrap;
+    color: ghostwhite;
+    font-size: 30px;
+}
+
+.infoItemAdjust{
+    padding-left: 1%;
+    color: ghostwhite;
+    font-size: large;
+    font-size: 30px;
+}
