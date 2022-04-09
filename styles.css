@@ -43,14 +43,13 @@ body {
 }
 
 .header {
-    height: 72px;
-    box-shadow: 3px 5px 30px rgba(0,0,0.06);
+    height: 75px;
     background-color: rgba(54, 69, 79);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     padding-left: 30px;
     
 
@@ -58,12 +57,13 @@ body {
 
 
 .headItem {
-    margin: 25px;
+    margin: 40%;
 }
 
 .headItem :hover {
     box-shadow: 3px 3px 5px black;
     border: 1px solid rgb(0, 0, 0);
+    
 }
 
 .content {
