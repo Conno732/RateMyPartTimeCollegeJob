@@ -31,6 +31,8 @@ li {
 
 #foot {
     flex:initial;
+    position:absolute;
+    bottom: 0;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -39,6 +41,8 @@ li {
 .header img{
     padding-top: 10px;
 }
+
+
 
 body {
     font-family:myFirstFont;
@@ -112,6 +116,7 @@ body {
 .postTitle {
     display: flex;
     justify-content: space-between;
+    
     flex-flow: row;
 }
 
@@ -199,6 +204,7 @@ body {
 
 .label input[type=submit] {
     padding: 10px;
+    border-radius: 10px;
 }
 
 textarea {
@@ -221,6 +227,8 @@ footer {
     background-color: grey;
     text-align: center;
     width: fill;
+
+    height: 100%;
 
 }
 
@@ -255,6 +263,10 @@ footer {
 .stars {
     flex-flow: column;
 }
+
+
+
+
 
 
 .star-rating {
