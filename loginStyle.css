@@ -24,9 +24,9 @@ body {
     
     border-radius: 10px;
     background: beige;
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-top: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
     padding: 15px;
     box-shadow: 3px 3px 5px black;
 }
