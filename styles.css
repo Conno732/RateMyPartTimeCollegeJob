@@ -61,19 +61,18 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding-left: 30px;
-    
 
 }
 
 
 .headItem {
-    margin: 40%;
-}
-
-.headItem :hover {
-    box-shadow: 3px 3px 5px black;
+    padding: 0.25em;
+    margin: 2em;
+    margin-right: 2em;
     border: 1px solid rgb(0, 0, 0);
-    
+    border-radius:5px;
+    background-color: ghostwhite;
+    cursor:pointer;
 }
 
 .content {
@@ -244,10 +243,12 @@ footer {
 }
 
 .spyglass{
-    width: 100%;
+    width: fit-content;
 }
 
 #searchSubmit{
+    display:flex;
+    width:fit-content;
     border-radius: 10px;
     border-width: 0px;
     cursor: pointer;
