@@ -2,9 +2,34 @@ import { networkProtocols } from "./networkProtocols.js";
 let network;
 
 if (document.getElementById("queryData")) {
-  document.getElementById("queryData").addEventListener("click", () => {});
-  document.getElementById("addData").addEventListener("click", () => {
-    network.createPosting("googal", "dev", "sophomore", "middlebook", "400", 5);
+  document.getElementById("queryData").addEventListener("click", () => {
+    network.downloadPostings();
+  });
+}
+
+if (document.getElementById("createPost")) {
+  document.getElementById("createPost").addEventListener("click", () => {
+    window.location.href = "./createPost.html";
+  });
+}
+
+if (document.getElementById("submitPost")) {
+  document.getElementById("submitPost").addEventListener("click", () => {
+    const title = document.getElementById("title");
+    const company = document.getElementById("company");
+    const pay = document.getElementById("pay");
+    const location = document.getElementById("location");
+    const tag = document.getElementById("tag");
+    const stars = document.getElementById("stars");
+    //Make sure data is valid
+    network.createPosting(
+      company.value,
+      title.value,
+      tag.value,
+      location.value,
+      pay.value,
+      stars.value
+    );
   });
 }
 
@@ -32,7 +57,5 @@ if (document.getElementById("password2")) {
 function start() {
   network = new networkProtocols();
 }
-
-function displayJobPostings() {}
 
 start();

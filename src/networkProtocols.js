@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 
 export class networkProtocols {
   constructor() {
@@ -85,5 +85,13 @@ export class networkProtocols {
     })();
   } //take object parameter that contains posting data, upload it to server
 
-  downloadPostings() {} //download ?all? postings from the server return a list of posting data
+  downloadPostings() {
+    (async () => {
+      const postings = collection(this.db, "postings");
+      const snapshot = await getDocs(postings);
+      snapshot.forEach((doc) => {
+        console.log(doc.id, "=>", doc.data());
+      });
+    })();
+  } //download ?all? postings from the server return a list of posting data
 }
