@@ -1,3 +1,9 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("ebrima.ttf");
+  }
+
+
 html {
     min-height: 100%;
     background: ghostwhite;
@@ -35,7 +41,7 @@ li {
 }
 
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:myFirstFont;
     margin: 0;
     flex-flow: column;
     height: 100%;
@@ -110,22 +116,43 @@ body {
 }
 
 .post {
-    width: 90   ;
+    display: flex;
+    width: 90;
     margin-bottom: 5px;
     padding: 10px;
     border: 1px solid ghostwhite;
     border-radius: 10px;
     font-size: x-large;
     flex-flow: column;
-    
+}
+
+.postHead {
+    display: flex;
+    padding: 10px;
+    flex-flow: row ;
+    justify-content: space-between;
+
+}
+
+.postFoot {
+    align-self: center;
+    font-size: 14pt;
+    text-align: center;
+    width: fit-content;
+    border-color:rgb(0, 0, 0);
+
+}
+
+.postBody {
+    color: rgba(248, 248, 255, .75);
 }
 
 .postings :hover {
-    box-shadow: 3px 3px 5px black;
+    border-color: black;
+    border-width: 1.5px;
+    cursor: pointer;
 }
-.post :hover {
-    box-shadow: 0px 0px 0px black;
-}
+
 
 
 
