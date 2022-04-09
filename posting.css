@@ -1,36 +1,18 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("ebrima.ttf");
+}
+
+body{
+    font-family:myFirstFont;
+}
+
 html {
     min-height: 100%;
     background: ghostwhite;
 
 
 }
-
-.header {
-    height: 75px;
-    background-color: rgba(54, 69, 79);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    padding-left: 30px;
-    
-
-}
-
-.information {
-    display: flex;
-    height: 75px;
-    background-color: rgba(54, 69, 79);
-    border-radius: 7px;
-    padding-left: 30px;
-    padding-top: 30px;
-    white-space: nowrap;
-    flex-flow: row;
-    
-
-}
-
 
 .headItem {
     margin-top: 40%;
@@ -44,15 +26,52 @@ html {
     
 }
 
+.header {
+    height: 75px;
+    background-color: rgba(54, 69, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 10;
+    padding-left: 30px;
+    
+
+}
+
+.information {
+    display: flex;
+    height: 120px;
+    background-color: rgba(54, 69, 79);
+    border-radius: 7px;
+    padding: 5px;
+    white-space: nowrap;
+    width: 99.5%
+    
+    
+
+}
+
+.flexFlowRow{
+    flex-flow: row;
+    background-color: ghostwhite;
+    margin: 0.5%;
+    margin-right: 10px; /* between white box space */
+    align-items: space-between;
+}
+
 .infoItem{
     white-space: nowrap;
-    color: ghostwhite;
+    color: black;
     font-size: 30px;
+    
 }
 
 .infoItemAdjust{
-    padding-left: 1%;
-    color: ghostwhite;
+    
+    color: black;
+    
     font-size: large;
     font-size: 30px;
 }
