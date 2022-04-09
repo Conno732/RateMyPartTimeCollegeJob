@@ -54,8 +54,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     padding-left: 30px;
     
 
@@ -139,12 +139,19 @@ body {
     font-size: 14pt;
     text-align: center;
     width: fit-content;
-    border-color:rgb(0, 0, 0);
+    padding-left: 10px;
 
+}
+
+.postFoot :hover {
+    background-color: black;
+    border-radius: 5px;
 }
 
 .postBody {
     color: rgba(248, 248, 255, .75);
+    padding-left: 10px;
+    font-size: medium;
 }
 
 .postings :hover {
@@ -154,12 +161,6 @@ body {
 }
 
 
-
-
-.postBody {
-    padding-left: 10px;
-    font-size: medium;
-}
 
 .search-container {
     display:flex;
