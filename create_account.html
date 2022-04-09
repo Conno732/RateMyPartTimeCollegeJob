@@ -4,16 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signupStyle.css" />
+    <link rel="shortcut icon" href="ratemyuniversityjob.png" />
     <script type="module" src="./dist/index.js"></script>
   </head>
   <body>
-    <label for="login">Email</label>
-    <input type="text" name="login" id="username" />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <label for="password2">Type password again</label>
-    <input type="password" name="password2" id="password2" />
-    <button id="submit">Create Account</button>
+
+    <div class = "inputContainer"placeholder="Enter Username" name="uname" required>
+      <div class = "loginItem">Sign Up For  </div>
+      <img src="ratemyuniversityjob.png">
+      <div class="container">
+      <div class = "usernameText">
+          <label for="uname"><b>Email<br></b></label>
+      </div>
+      <input type="text" placeholder="Enter Email Address" name="uname" id="username" required>
+      <div class = "usernameText">
+          <label for="psw"><b><br>Password<br></b></label>
+      </div>
+      <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+      <label for="uname"><b></b></label>
+      <div class = "usernameText">
+          <label for="psw"><b><br>Confrim Password<br></b></label>
+      </div>
+      <input type="password" placeholder="Confrim Password" name="psw" id="password2" required>
+      <label for="uname"><b><br></b></label>
+          <button type="submit" id="submit">Sign Up</button>
+          
+        </div>
+
+
+   
   </body>
 </html>

@@ -1,0 +1,60 @@
+html {
+  min-height: 100%;
+  background: lightgray;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: silver;
+  text-align: center;
+}
+
+.loginItem {
+  text-align: center;
+  font-size: 50px;
+  height: 72px;
+  margin: 10px;
+}
+
+.inputContainer {
+  border-radius: 10px;
+  background: rgba(54, 69, 79);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+  padding: 15px;
+  box-shadow: 3px 3px 5px black;
+}
+
+.usernameText {
+  text-align: left;
+}
+
+label {
+  text-align: right;
+}
+
+input[type="text"],
+input[type="password"] {
+  text-align: left;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid darkgray;
+  box-sizing: border-box;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button {
+  font-size: 25px;
+}
+
+img {
+  width: 70%;
+  margin: -30%;
+}

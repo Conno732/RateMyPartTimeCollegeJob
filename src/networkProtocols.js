@@ -77,14 +77,14 @@ export class networkProtocols {
       });
   }
 
-  createPosting(company, title, tag, location, description) {
+  createPosting(company, title, location, description) {
     const postings = (async () => {
       try {
         const docRef = await addDoc(collection(this.db, "postings"), {
           poster: `${JSON.parse(sessionStorage.getItem("loginData"))}`,
           company: `${company}`,
           title: `${title}`,
-          tag: `${tag}`,
+          tag: `None`,
           location: `${location}`,
           pay: `N/A`,
           stars: "N/A",
@@ -111,13 +111,33 @@ export class networkProtocols {
 
   downloadPostings() {
     (async () => {
+      console.log("hi");
       const postings = collection(this.db, "postings");
       const snapshot = await getDocs(postings);
       const postDiv = document.getElementById("postings");
       snapshot.forEach((doc) => {
         let data = doc.data();
         let html = document.createElement("div");
-        html.innerHTML = `<p> Title: ${data.title}, Company: ${data.company}, Pay: $${data.pay}, Location: ${data.location}, stars: ${data.stars}, Description: ${data.description}`;
+
+        html.innerHTML = `<div class = "post">
+            
+        <div class = "postHead" >
+            <div class = "postTitle">${data.title}</div>
+            <div class = "companyName">${data.company}</div>
+            <div class = "pay">$${data.pay}/hr</div>
+            <div class = "avgRating">${data.stars} Stars</div>
+        </div>
+        
+    <div class = "postBody">
+    ${data.description}
+    </div>
+
+    <div class = "postFoot">
+        <div class = tagName>
+        ${data.tag}
+        </div>
+    </div>
+</div>`;
         html.id = `${data.id}`;
         html.addEventListener("click", () => {
           sessionStorage.setItem("currentID", JSON.stringify(html.id));
@@ -138,27 +158,45 @@ export class networkProtocols {
       let data = snapshot.data();
       //console.log(snapshot.data());
       document.getElementById("title").innerText = data.title;
-      document.getElementById("poster").innerText = data.poster;
       document.getElementById("company").innerText = data.company;
       document.getElementById("location").innerText = data.location;
-      document.getElementById("pay").innerText = data.pay;
-      document.getElementById("tag").innerText = data.tag;
-      document.getElementById("stars").innerText = `${data.stars}`;
-      document.getElementById("description").innerText = `${data.description}`;
+      document.getElementById("pay").innerText = "$" + data.pay + "/hr";
+      //document.getElementById("tag").innerText = data.tag;
+      document.getElementById("stars").innerText = `${data.stars}` + "/5 Stars";
+      //document.getElementById("description").innerText = `${data.description}`;
       const userReviews = document.getElementById("reviewDiv");
       const reviewAppend = document.createElement("div");
       let reviewsData = data.reviews;
       for (let rev in data.reviews) {
         const dataStuff = data.reviews[rev];
-        reviewAppend.innerHTML += `Stars: ${dataStuff.stars} Review ${dataStuff.review} Pay: ${dataStuff.pay}`;
+        reviewAppend.innerHTML += `<div class="post">
+        <div class="postHead">
+          <div class="postTitle">hidden@umn.edu</div>
+          <div class="pay">$${dataStuff.pay}/hr</div>
+          <div class="avgRating">${dataStuff.stars}/5 Stars</div>
+        </div>
+        <div class="postBody">
+        ${dataStuff.review}
+        </div>
+        <div class="postFoot">
+          <div class="tagName">Tag</div>
+        </div>
+      </div>`;
       }
       userReviews.appendChild(reviewAppend);
 
       document.getElementById("submitReview").addEventListener("click", () => {
         const reviewTextInput =
           document.getElementById("reviewTextInput").value;
-        const reviewStarInput =
-          document.getElementById("reviewStarInput").value;
+        // const reviewStarInput =
+        //   document.getElementById("reviewStarInput").value;
+        let element = document.getElementsByName("stars");
+        let reviewStarInput;
+        for (let i = 0; i < element.length; i++) {
+          if (element[i].checked) {
+            reviewStarInput = element[i].value;
+          }
+        }
         const payInput = document.getElementById("payInput").value;
         const review = {
           review: reviewTextInput,

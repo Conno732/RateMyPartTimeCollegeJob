@@ -1,0 +1,252 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("ebrima.ttf");
+}
+
+html {
+  min-height: 100%;
+  background: lightgray;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+li {
+  flex: 1 1 auto;
+  display: inline;
+  padding: 10px;
+}
+
+#foot {
+  flex: initial;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.header img {
+  padding-top: 10px;
+}
+
+body {
+  font-family: myFirstFont;
+  margin: 0;
+  flex-flow: column;
+  height: 100%;
+}
+
+.header {
+  height: 75px;
+  background-color: rgba(54, 69, 79);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  flex-flow: row;
+}
+
+.headItem {
+  padding: 0.25em;
+  margin: 2em;
+
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: ghostwhite;
+  cursor: pointer;
+}
+
+.content {
+  align-items: stretch;
+  justify-content: center;
+  display: flex;
+  flex-flow: row;
+  margin: 30px;
+  flex-grow: 1;
+}
+
+.header .content {
+  justify-content: right;
+}
+
+.sidebar {
+  color: ghostwhite;
+  width: 33%;
+  position: sticky;
+  top: 20px;
+  border-radius: 10px;
+  background: rgba(54, 69, 79);
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.postings {
+  border-radius: 10px;
+  background-color: rgba(54, 69, 79);
+  color: ghostwhite;
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  padding-left: 15px;
+  width: 66%;
+}
+
+.postTitle {
+  display: flex;
+  justify-content: space-between;
+
+  flex-flow: row;
+}
+
+.post {
+  display: flex;
+  width: 90;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid ghostwhite;
+  border-radius: 10px;
+  font-size: x-large;
+  flex-flow: column;
+}
+
+.postHead {
+  display: flex;
+  padding: 10px;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.postFoot {
+  align-self: center;
+  font-size: 14pt;
+  text-align: center;
+  width: fit-content;
+  padding-left: 10px;
+}
+
+.postFoot :hover {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.postBody {
+  color: rgba(248, 248, 255, 0.75);
+  padding-left: 10px;
+  font-size: medium;
+}
+
+.postings :hover {
+  border-color: black;
+  border-width: 1.5px;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.forms {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 60%;
+  padding: 10px;
+  flex-flow: row;
+}
+
+#ulforms {
+  padding: 10px;
+}
+
+.label {
+  text-align: center;
+  font-size: 15pt;
+}
+
+.label textarea {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 12pt;
+}
+
+.label input[type="submit"] {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  text-align: left;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: grey;
+  text-align: center;
+  width: fill;
+
+  height: 100%;
+}
+
+#search {
+  width: 95%;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.spyglass {
+  width: fit-content;
+}
+
+#searchSubmit {
+  display: flex;
+  width: fit-content;
+  border-radius: 10px;
+  border-width: 0px;
+  cursor: pointer;
+  padding: 0;
+}
+
+#searchSubmit :hover {
+  background-color: rosybrown;
+  border-radius: inherit;
+}
+#searchSubmit :active {
+  background-color: brown;
+}
+
+.stars {
+  flex-flow: column;
+}

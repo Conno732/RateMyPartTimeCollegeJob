@@ -4,26 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rate My Part Time College Job</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="rmuj1.png" />
     <script type="module" src="./dist/index.js"></script>
   </head>
   <body>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" />
-    <label for="company">Company</label>
-    <input type="text" name="company" id="company" />
-    <label for="location">Location</label>
-    <input type="text" name="location" id="location" />
-    <label for="tag">Tag</label>
-    <input type="text" name="tag" id="tag" />
-    <label for="addReview">description</label>
-    <textarea
-      id="description"
-      name="addReview"
-      cols="40"
-      rows="10"
-      maxlength="300"
-    ></textarea>
-    <button id="submitPost">Submit Post</button>
+<!---->
+    <div class ="header">
+      <img width = 30% src="ratemyuniversityjob.png">
+      <div class = "headItem" onclick="location.href='jobPostings.html'">
+              Back
+      </div>
+  </div>
+
+  <div class = "forms">
+      <ul id="ulforms">
+          <li>
+              
+                  <label for="companyName" class="label">Company Name: </label>
+                  <input class="label" type="text" id="companyName" name ="companyName">
+              
+          </li>
+          <li>
+
+                  <label for="jobTitle" class ="label">Job Title: </label>
+                  <input type="text" id="jobTitle" name="jobTitle" class = "label">
+
+          </li>
+          <li>
+              <label for="location" class="label">Location: </label>
+              <input type="text" id="location" name="location" class="label">
+          </li>
+      </ul>
+
+          
+          
+          
+                
+          
+      
+  </div>
+
+  <div class = "forms">
+      <div class="form">
+          <div class="label">
+              Description
+          </div>
+          <div class = "label">
+              <textarea id="synopsis" name ="synopsis" maxlength = 100></textarea>
+          </div>
+          
+      </div>
+  </div>
+ 
+      
+     
+  </div>
+  <div class = label>
+      <input type="submit" id="submitPost">
+  </div>
+
   </body>
 </html>

@@ -4,15 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+    <link rel="shortcut icon" href="rmuj1.png" />
     <script type="module" src="./dist/index.js"></script>
   </head>
   <body>
-    <label for="login">Username</label>
-    <input type="text" name="login" id="username" />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <button id="submit">Login</button>
-    <a href="./create_account.html">Create Account</a>
+    <body>
+      <div class = "inputContainer"placeholder="Enter Username" name="uname" required>
+          <div class = "loginItem">Login to <br>
+            </div>
+          <img src="ratemyuniversityjob.png">
+          <div class="container">
+          <div class = "usernameText">
+              <label for="uname"><b><br>Email<br></b></label>
+          </div>
+          <input type="text" placeholder="Enter Email Address" name="uname" id="username" required>
+          <div class = "usernameText">
+              <label for="psw"><b><br>Password<br></b></label>
+          </div>
+          <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+          <label for="uname"><b><br><br></b></label>
+              <button type="submit" id="submit">Login</button>
+              <button type="submit" id="createAccount">Sign Up</button>
+            </div>
   </body>
 </html>

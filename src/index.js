@@ -9,16 +9,14 @@ if (document.getElementById("createPost")) {
 
 if (document.getElementById("submitPost")) {
   document.getElementById("submitPost").addEventListener("click", () => {
-    const title = document.getElementById("title");
-    const company = document.getElementById("company");
+    const title = document.getElementById("jobTitle");
+    const company = document.getElementById("companyName");
     const location = document.getElementById("location");
-    const tag = document.getElementById("tag");
-    const description = document.getElementById("description");
+    const description = document.getElementById("synopsis");
     //Make sure data is valid
     network.createPosting(
       company.value,
       title.value,
-      tag.value,
       location.value,
       description.value
     );
@@ -38,6 +36,10 @@ if (document.getElementById("password2")) {
     }
   });
 } else if (document.getElementById("submit")) {
+  if (document.getElementById("createAccount"))
+    document.getElementById("createAccount").addEventListener("click", () => {
+      window.location.href = "./create_account.html";
+    });
   document.getElementById("submit").addEventListener("click", () => {
     const username = document.getElementById("username");
     const password = document.getElementById("password");

@@ -4,43 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Job Post</title>
     <script type="module" src="./dist/index.js"></script>
+    <link rel="stylesheet" href="posting.css" />
+    <title>Posting</title>
   </head>
   <body>
     <div id="jobPostFlag"></div>
-    <h1>User</h1>
-    <p id="poster"></p>
-    <h1>Title</h1>
-    <p id="title"></p>
-    <h1>Company</h1>
-    <p id="company"></p>
-    <h1>Average Pay</h1>
-    <p id="pay"></p>
-    <h1>Location</h1>
-    <p id="location"></p>
-    <h1>Tag</h1>
-    <p id="tag"></p>
-    <h1>Stars</h1>
-    <p id="stars"></p>
-    <h1>description</h1>
-    <p id="description"></p>
-    <h1>Reviews</h1>
-    <div id="reviews">
-      <label for="addReview">Add Review</label>
-      <textarea
-        id="reviewTextInput"
-        name="addReview"
-        cols="40"
-        rows="10"
-        maxlength="300"
-      ></textarea>
-      <label>Stars</label>
-      <input type="range" min="1" max="5" id="reviewStarInput" />
-      <label>Pay</label>
-      <input id="payInput" />
-      <button id="submitReview">Submit Review</button>
-      <div id="reviewDiv"></div>
+    <!--  -->
+    <div class="header">
+      <img width="15%" src="ratemyuniversityjob.png" />
+      <div class="headItem" onclick="location.href='jobPostings.html'">
+        Back
+      </div>
+    </div>
+    <br />
+    <div class="information">
+      <div class="flexFlowRow">
+        <div class="infoItem">Job Title:</div>
+        <div class="infoItemAdjust" id="title"></div>
+      </div>
+
+      <div class="flexFlowRow">
+        <div class="infoItem">|<br />|</div>
+      </div>
+      <div class="flexFlowRow">
+        <div class="infoItem">Company:</div>
+        <div class="infoItemAdjust" id="company"></div>
+      </div>
+      <div class="flexFlowRow">
+        <div class="infoItem">|<br />|</div>
+      </div>
+
+      <div class="flexFlowRow">
+        <div class="infoItem">Location:</div>
+        <div class="infoItemAdjust" id="location"></div>
+      </div>
+      <div class="flexFlowRow">
+        <div class="infoItem">|<br />|</div>
+      </div>
+
+      <div class="flexFlowRow">
+        <div class="infoItem">Avg Pay:</div>
+        <div class="infoItemAdjust" id="pay"></div>
+      </div>
+      <div class="flexFlowRow">
+        <div class="infoItem">|<br />|</div>
+      </div>
+
+      <div class="flexFlowRow">
+        <div class="infoItem">Review Score:</div>
+        <div class="infoItemAdjust" id="stars"></div>
+      </div>
+    </div>
+
+    <div class="postings" id="reviewDiv">
+      <div class="post">
+        <div class="postHead">
+          <div class="postTitle">
+            <textarea
+              id="reviewTextInput"
+              placeholder="Write a Review"
+              rows="5"
+              cols="60"
+              name="revText"
+              id="revText"
+            ></textarea>
+          </div>
+          <div class="stars">
+            <div class="star-rating">
+              <input type="radio" name="stars" id="star-a" value="5" />
+              <label for="star-a"></label>
+
+              <input type="radio" name="stars" id="star-b" value="4" />
+              <label for="star-b"></label>
+
+              <input type="radio" name="stars" id="st ar-c" value="3" />
+              <label for="star-c"></label>
+
+              <input type="radio" name="stars" id="star-d" value="2" />
+              <label for="star-d"></label>
+
+              <input type="radio" name="stars" id="star-e" value="1" checked />
+              <label for="star-e"></label>
+            </div>
+          </div>
+          <div class="pay">
+            <input
+              id="payInput"
+              type="text"
+              placeholder="Hourly Pay(USD)"
+              name="hourlyReview"
+              id="hourlyReview"
+            />
+          </div>
+          <input type="submit" id="submitReview" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
