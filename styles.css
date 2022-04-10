@@ -263,6 +263,15 @@ textarea {
   padding: 0;
 }
 
+#refresh {
+  display: flex;
+  width: fit-content;
+  border-radius: 10px;
+  border-width: 1px;
+  cursor: pointer;
+  padding: 5px;
+}
+
 #searchSubmit :hover {
   background-color: rosybrown;
   border-radius: inherit;
@@ -294,8 +303,11 @@ textarea {
   background-color: lightgrey;
   color: black;
   width: max-content;
+  border-radius: 10px;
 }
-.tag-container :hover {
+
+.tag:hover {
+  background-color: darkgray;
   cursor: pointer;
 }
 
