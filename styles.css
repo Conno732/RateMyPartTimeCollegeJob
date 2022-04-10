@@ -216,6 +216,19 @@ textarea {
   
 }
 
+.postHeadDivider {
+  display:flex;
+  flex-flow: row;
+  
+}
+
+.postHeadDivider > * {
+    margin-inline-end: 10px;
+    display:inline-block;
+}
+
+
+
 #search {
   width: 95%;
   margin: 0px;
@@ -258,4 +271,8 @@ textarea {
 
 .bio{
     text-decoration: underline;
+}
+
+.descAbout{
+    margin-left: 20px;
 }
