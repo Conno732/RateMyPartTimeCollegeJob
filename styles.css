@@ -276,3 +276,21 @@ textarea {
 .descAbout{
     margin-left: 20px;
 }
+
+
+.tag{
+
+    padding: 3px;
+    margin: 3px;
+    background-color: lightgrey;
+    color: black;
+    width: max-content;
+
+}
+
+.tag-container{
+    display:flex;
+    flex-wrap:wrap;
+    width: 100%;
+
+}
