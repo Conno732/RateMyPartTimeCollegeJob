@@ -9,52 +9,65 @@
     <link rel="shortcut icon" href="rmuj1.png" />
     <script type="module" src="./dist/index.js"></script>
   </head>
-  <body>  
-  <!---->
-  <div id="queryData"></div>
-  <div class ="header">
-    <img width = 15% src="ratemyuniversityjob.png">
-    <div class = "content">
-        
-        <div class="headItem" onclick="location.href='about.html'">
-            About
+  <body>
+    <!---->
+    <div id="queryData"></div>
+    <div class="contentStuffs">
+      <div class="header">
+        <img width="15%" src="ratemyuniversityjob.png" />
+        <div class="content">
+          <div class="headItem" onclick="location.href='about.html'">About</div>
+          <div
+            class="headItem"
+            onclick="location.href='createPost.html'"
+            id="createPost"
+          >
+            Make Job Posting
+          </div>
         </div>
-        <div class = "headItem" onclick="location.href='createPost.html'" id="createPost">
-            Make Job Posting      
-        </div>
-   </div>
-</div>
-    
-</div>
-<div class = "content">
-    <div class = "sidebar">
-        <div class = "search-container">
-            <label class = "padding" for="search">Search</label>
+      </div>
+      <div class="content">
+        <div class="sidebar">
+          <div class="search-container">
+            <label class="padding" for="search">Search</label>
             <ul>
-                
-                <li><input type="text" id="search" name="search" placeholder="Enter key word"></li>
-                <li id="searchSubmit"> <button id="searchSubmit"type="submit"><img class="spyglass"height= 38px src="searchIcon.png"></button></li>
-                <li id="searchSubmit"> <button id="refresh" type="submit">Refresh</button></li>
+              <li>
+                <input
+                  type="text"
+                  id="search"
+                  name="search"
+                  placeholder="Enter key word"
+                />
+              </li>
+              <li id="searchSubmit">
+                <button id="searchSubmit" type="submit">
+                  <img class="spyglass" height="38px" src="searchIcon.png" />
+                </button>
+              </li>
+              <li id="searchSubmit">
+                <button id="refresh" type="submit">Refresh</button>
+              </li>
             </ul>
-
+          </div>
+          <div class="tag-container" id="tag-container">Find Tags:</div>
         </div>
-        <div class="tag-container" id="tag-container">
-          Find Tags:
-            
-           
-        </div>
+        <div class="postings" id="postings"></div>
+      </div>
     </div>
-    <div class = "postings" id="postings"> 
-    </div>
-</div>
 
-
-</body>
-<footer class="footer">
-  <div class="social">
-      <ul id ="foot">
-          <li id="foot"><a href="https://github.com/Conno732/RateMyPartTimeCollegeJob" target="_blank"> <img width = 20px height = 20px src="gitpic.png" /></a></li>
-      </ul>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="social">
+        <ul id="foot">
+          <li id="foot">
+            <a
+              href="https://github.com/Conno732/RateMyPartTimeCollegeJob"
+              target="_blank"
+            >
+              <img width="20px" height="20px" src="gitpic.png"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
