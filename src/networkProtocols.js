@@ -245,7 +245,7 @@ export class networkProtocols {
         ${dataStuff.review}
         </div>
         <div class="postFoot">
-          <div class="tagName">Tag</div>
+         
         </div>
       </div>`;
       }
