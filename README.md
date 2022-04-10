@@ -10,5 +10,5 @@ Rate My University Job is a job postings website created for college students. T
 ## Accomplishments that we're proud of
 
 ## What we learned
-In general, we learned how to format and beatify HTML files with CSS, in addition to connnecting a HTML
+In general, we learned how to format and beatify HTML files with CSS, in addition to connnecting a HTML. We learned how to use the FireStore database and how to query, upload, and update data.
 ## What's next for Rate My University Job
