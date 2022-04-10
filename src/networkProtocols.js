@@ -113,7 +113,6 @@ export class networkProtocols {
 
   downloadPostings() {
     (async () => {
-      console.log("hi");
       const postings = collection(this.db, "postings");
       const snapshot = await getDocs(postings);
       const postDiv = document.getElementById("postings");
@@ -156,9 +155,62 @@ export class networkProtocols {
         });
         postDiv.appendChild(html);
       });
-      console.log(tagData);
+      const tagContainer = document.getElementById("tag-container");
+      for (let tagInfo in tagData) {
+        let tagElement = document.createElement("div");
+        tagElement.id = tagInfo;
+        tagElement.classList = "tag";
+        tagElement.innerText = `${tagInfo} | ${tagData[tagInfo]} `;
+        tagElement.addEventListener("click", () => {
+          this.downloadByTag(tagInfo);
+        });
+        tagContainer.appendChild(tagElement);
+      }
+      //console.log(tagData);
     })();
   } //download ?all? postings from the server return a list of posting data
+
+  downloadByTag(tag) {
+    const documentRef = collection(this.db, "postings");
+    const q = query(documentRef, where("tag", "==", tag));
+    (async () => {
+      const postDiv = document.getElementById("postings");
+      postDiv.innerHTML = "";
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        let data = doc.data();
+        let html = document.createElement("div");
+
+        html.innerHTML = `<div class = "post">
+            
+        <div class = "postHead" >
+            <div class = "postTitle">${data.title}</div>
+            <div class = "companyName">${data.company}</div>
+            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+            <div class = "avgRating">${parseFloat(data.stars).toFixed(
+              1
+            )} Stars</div>
+        </div>
+        
+    <div class = "postBody">
+    ${data.description}
+    </div>
+
+    <div class = "postFoot">
+        <div class = tagName>
+        ${data.tag}
+        </div>
+    </div>
+</div>`;
+        html.id = `${data.id}`;
+        html.addEventListener("click", () => {
+          sessionStorage.setItem("currentID", JSON.stringify(html.id));
+          window.location.href = "./jobPost.html";
+        });
+        postDiv.appendChild(html);
+      });
+    })();
+  }
 
   downloadPost() {
     const documentData = JSON.parse(sessionStorage.getItem("currentID"));
