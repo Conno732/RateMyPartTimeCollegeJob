@@ -79,14 +79,14 @@ export class networkProtocols {
       });
   }
 
-  createPosting(company, title, location, description) {
-    const postings = (async () => {
+  createPosting(company, title, location, description, tag) {
+    (async () => {
       try {
         const docRef = await addDoc(collection(this.db, "postings"), {
           poster: `${JSON.parse(sessionStorage.getItem("loginData"))}`,
           company: `${company}`,
           title: `${title}`,
-          tag: `None`,
+          tag: `${tag}`,
           location: `${location}`,
           pay: `N/A`,
           stars: "N/A",
@@ -117,19 +117,26 @@ export class networkProtocols {
       const postings = collection(this.db, "postings");
       const snapshot = await getDocs(postings);
       const postDiv = document.getElementById("postings");
+      let tagData = new Object();
       snapshot.forEach((doc) => {
         let data = doc.data();
         let html = document.createElement("div");
+        if (tagData[data.tag]) tagData[data.tag] += 1;
+        else tagData[data.tag] = 1;
 
         html.innerHTML = `<div class = "post">
             
         <div class = "postHead" >
-            <div class = "postTitle">${data.title}</div>
-            <div class = "companyName">${data.company}</div>
-            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+           <div class="postHeadDivider"> <div class = "postTitle">${
+             data.title
+           }</div>
+            <div class = "companyName">${data.company}</div> </div>
+           <div class="postHeadDivider"> <div class = "pay">$${parseFloat(
+             data.pay
+           ).toFixed(1)}/hr</div>
             <div class = "avgRating">${parseFloat(data.stars).toFixed(
               1
-            )} Stars</div>
+            )} Stars</div> </div>
         </div>
         
     <div class = "postBody">
@@ -149,6 +156,7 @@ export class networkProtocols {
         });
         postDiv.appendChild(html);
       });
+      console.log(tagData);
     })();
   } //download ?all? postings from the server return a list of posting data
 
