@@ -6,6 +6,7 @@
 html {
   min-height: 100%;
   background: lightgray;
+  display: flex;
 }
 
 ul {
@@ -21,6 +22,10 @@ li {
   flex: 1 1 auto;
   display: inline;
   padding: 10px;
+}
+
+.contentStuffs {
+  flex-flow: column;
 }
 
 /*#foot {
@@ -41,6 +46,17 @@ body {
   margin: 0;
   flex-flow: column;
   height: 100%;
+  min-height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 .header {
@@ -209,25 +225,21 @@ textarea {
 }
 
 .footer {
-    width: 100%;
-    background-color: rgba(54, 69, 79);
-    color: white;
-    text-align: center;
-  
+  width: 100%;
+  background-color: rgba(54, 69, 79);
+  color: white;
+  text-align: center;
 }
 
 .postHeadDivider {
-  display:flex;
+  display: flex;
   flex-flow: row;
-  
 }
 
 .postHeadDivider > * {
-    margin-inline-end: 10px;
-    display:inline-block;
+  margin-inline-end: 10px;
+  display: inline-block;
 }
-
-
 
 #search {
   width: 95%;
@@ -264,36 +276,32 @@ textarea {
   flex-flow: column;
 }
 
-.bio :hover{
-    color: blue;
-    text-decoration: underline blue;
+.bio :hover {
+  color: blue;
+  text-decoration: underline blue;
 }
 
-.bio{
-    text-decoration: underline;
+.bio {
+  text-decoration: underline;
 }
 
-.descAbout{
-    margin-left: 20px;
+.descAbout {
+  margin-left: 20px;
 }
 
-
-.tag{
-
-    padding: 3px;
-    margin: 3px;
-    background-color: lightgrey;
-    color: black;
-    width: max-content;
-
+.tag {
+  padding: 3px;
+  margin: 3px;
+  background-color: lightgrey;
+  color: black;
+  width: max-content;
 }
 .tag-container :hover {
   cursor: pointer;
 }
 
-.tag-container{
-    display:flex;
-    flex-wrap:wrap;
-    width: 100%;
-
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
