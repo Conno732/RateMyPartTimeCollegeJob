@@ -1,3 +1,5 @@
+https://conno732.github.io/RateMyPartTimeCollegeJob/
+
 ## Inspiration
 Searching a new job is intimidating as a college student. Often the experience at a job can differ from the employer description, and the level of pay for internships & part time work is hard to find. What if you could gain insight into other student's experiences at a job posting? Rate My University Job fulfills that role by providing a forum space designed around these issues.
 ## What it does
