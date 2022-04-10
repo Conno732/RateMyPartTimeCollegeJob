@@ -60,6 +60,11 @@ function start() {
   }
   if (document.getElementById("queryData")) {
     network.downloadPostings();
+    document.getElementById("searchSubmit").addEventListener("click", () => {
+      const searchInfo = document.getElementById("search").value;
+      console.log(searchInfo);
+      network.downloadBySearch(searchInfo);
+    });
   }
 }
 

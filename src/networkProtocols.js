@@ -15,6 +15,8 @@ import {
   getDoc,
   doc,
   updateDoc,
+  query,
+  where,
 } from "firebase/firestore";
 
 export class networkProtocols {
@@ -124,8 +126,10 @@ export class networkProtocols {
         <div class = "postHead" >
             <div class = "postTitle">${data.title}</div>
             <div class = "companyName">${data.company}</div>
-            <div class = "pay">$${data.pay}/hr</div>
-            <div class = "avgRating">${data.stars} Stars</div>
+            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+            <div class = "avgRating">${parseFloat(data.stars).toFixed(
+              1
+            )} Stars</div>
         </div>
         
     <div class = "postBody">
@@ -160,9 +164,11 @@ export class networkProtocols {
       document.getElementById("title").innerText = data.title;
       document.getElementById("company").innerText = data.company;
       document.getElementById("location").innerText = data.location;
-      document.getElementById("pay").innerText = "$" + data.pay + "/hr";
+      document.getElementById("pay").innerText =
+        "~$" + parseFloat(data.pay).toFixed(1) + "/hr";
       //document.getElementById("tag").innerText = data.tag;
-      document.getElementById("stars").innerText = `${data.stars}` + "/5 Stars";
+      document.getElementById("stars").innerText =
+        `~${parseFloat(data.stars).toFixed(1)}` + "/5 Stars";
       //document.getElementById("description").innerText = `${data.description}`;
       const userReviews = document.getElementById("reviewDiv");
       const reviewAppend = document.createElement("div");
@@ -242,5 +248,45 @@ export class networkProtocols {
     });
   }
 
-  downloadByTag() {}
+  downloadBySearch(input) {
+    const documentRef = collection(this.db, "postings");
+    const q = query(documentRef, where("title", "==", input));
+    (async () => {
+      const postDiv = document.getElementById("postings");
+      postDiv.innerHTML = "";
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        let data = doc.data();
+        let html = document.createElement("div");
+
+        html.innerHTML = `<div class = "post">
+            
+        <div class = "postHead" >
+            <div class = "postTitle">${data.title}</div>
+            <div class = "companyName">${data.company}</div>
+            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+            <div class = "avgRating">${parseFloat(data.stars).toFixed(
+              1
+            )} Stars</div>
+        </div>
+        
+    <div class = "postBody">
+    ${data.description}
+    </div>
+
+    <div class = "postFoot">
+        <div class = tagName>
+        ${data.tag}
+        </div>
+    </div>
+</div>`;
+        html.id = `${data.id}`;
+        html.addEventListener("click", () => {
+          sessionStorage.setItem("currentID", JSON.stringify(html.id));
+          window.location.href = "./jobPost.html";
+        });
+        postDiv.appendChild(html);
+      });
+    })();
+  }
 }
