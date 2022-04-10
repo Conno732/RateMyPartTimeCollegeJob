@@ -287,6 +287,9 @@ textarea {
     width: max-content;
 
 }
+.tag-container :hover {
+  cursor: pointer;
+}
 
 .tag-container{
     display:flex;
