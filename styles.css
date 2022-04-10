@@ -23,7 +23,7 @@ li {
   padding: 10px;
 }
 
-#foot {
+/*#foot {
   flex: initial;
   position: absolute;
   bottom: 0;
@@ -31,7 +31,7 @@ li {
   justify-content: center;
   padding: 10px;
 }
-
+*/
 .header img {
   padding-top: 10px;
 }

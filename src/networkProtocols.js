@@ -241,4 +241,6 @@ export class networkProtocols {
       window.location.href = "./jobPost.html";
     });
   }
+
+  downloadByTag() {}
 }
