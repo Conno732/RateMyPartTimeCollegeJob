@@ -67,6 +67,11 @@ function start() {
       console.log(searchInfo);
       network.downloadBySearch(searchInfo);
     });
+    document.querySelectorAll(".myclass").forEach((node) => {
+      node.addEventListener("click", () => {
+        //do something node.id
+      });
+    });
   }
 }
 
