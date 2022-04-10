@@ -1,12 +1,10 @@
-https://conno732.github.io/RateMyPartTimeCollegeJob/
-
 ## Inspiration
 Searching a new job is intimidating as a college student. Often the experience at a job can differ from the employer description, and the level of pay for internships & part time work is hard to find. What if you could gain insight into other student's experiences at a job posting? Rate My University Job fulfills that role by providing a forum space designed around these issues.
 ## What it does
-Rate My University Job is a job postings website created for college students. To access the website, a user must first create an account using a .edu email address. Users can search for job postings based on tags or the job title. The search results are filter are filtered by .edu domain name for users from the same University. A job posting contains information like the average pay reviewers received at the job, the location, a description, an average rating out of 5 stars.
+Rate My University Job is a job postings website created for college students. To access the website, a user must first create an account using a .edu email address. Users can search for job postings based on tags or the job title. The search results are filter are filtered by .edu domain name for users from the same University. A job posting contains information like the average pay reviewers received at the job, the location, a description, an average rating out of 5 stars. If a job posting doesn't exist for their position, they can create a new posting and provide the title, description, location, and a tag. 
 
 ## How we built it
-Rate My University Job is a job postings website created for college students. To access the website, a user must first create an account using a .edu email address. Users can search for job postings based on tags or the job title. A job posting contains information like the average pay reviewers received at the job, the location, a description, and an average rating out of 5 stars. Users can post a review in a job posting and give their experience, pay, and rating of a job. If a job posting doesn't exist for their position, they can create a new posting and provide the title, description, location, and a tag. We also used webhack and Node.js
+To create the base website, we used HTML and CSS, using JavaScript to update and query the database. The database for the job postings, reviews, users, and authentification was FireBase. We heavily relied on JavaScript to add interactivity to the website. 
 ## Challenges we ran into
 1. Footer implementation
 2. Developing a schema and using a database
