@@ -208,12 +208,12 @@ textarea {
   box-sizing: border-box;
 }
 
-footer {
-  background-color: grey;
-  text-align: center;
-  width: fill;
-
-  height: 100%;
+.footer {
+    width: 100%;
+    background-color: rgba(54, 69, 79);
+    color: white;
+    text-align: center;
+  
 }
 
 #search {
@@ -249,4 +249,13 @@ footer {
 
 .stars {
   flex-flow: column;
+}
+
+.bio :hover{
+    color: blue;
+    text-decoration: underline blue;
+}
+
+.bio{
+    text-decoration: underline;
 }
