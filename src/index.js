@@ -13,12 +13,14 @@ if (document.getElementById("submitPost")) {
     const company = document.getElementById("companyName");
     const location = document.getElementById("location");
     const description = document.getElementById("synopsis");
+    const tag = document.getElementById("tag");
     //Make sure data is valid
     network.createPosting(
       company.value,
       title.value,
       location.value,
-      description.value
+      description.value,
+      tag.value
     );
   });
 }
