@@ -1,11 +1,14 @@
-# RateMyPartTimeCollegeJob
+## Inspiration
+Searching a new job is intimidating as a college student. Often the experience at a job can differ from the employer description, and the level of pay for internships & part time work is hard to find. What if you could gain insight into other student's experiences at a job posting? Rate My University Job fulfills that role by providing a forum space designed around these issues.
+## What it does
+Rate My University Job is a job postings website created for college students. To access the website, a user must first create an account using a .edu email address. Users can search for job postings based on tags or the job title. The search results are filter are filtered by .edu domain name for users from the same University. A job posting contains information like the average pay reviewers received at the job, the location, a description, an average rating out of 5 stars.
 
-## Back end
+## How we built it
 
-### TODO
+## Challenges we ran into
 
-The ordering of website interaction.
+## Accomplishments that we're proud of
 
-Login portal --> ?Create account? --> Download data --> Display data --> search by tag OR create posting
+## What we learned
 
---> posting website
+## What's next for Rate My University Job
