@@ -116,6 +116,7 @@ export class networkProtocols {
       const postings = collection(this.db, "postings");
       const snapshot = await getDocs(postings);
       const postDiv = document.getElementById("postings");
+      postDiv.innerHTML = "";
       let tagData = new Object();
       snapshot.forEach((doc) => {
         let data = doc.data();
@@ -143,9 +144,7 @@ export class networkProtocols {
     </div>
 
     <div class = "postFoot">
-        <div class = tagName>
-        ${data.tag}
-        </div>
+       
     </div>
 </div>`;
         html.id = `${data.id}`;
@@ -156,6 +155,7 @@ export class networkProtocols {
         postDiv.appendChild(html);
       });
       const tagContainer = document.getElementById("tag-container");
+      tagContainer.innerHTML = "";
       for (let tagInfo in tagData) {
         let tagElement = document.createElement("div");
         tagElement.id = tagInfo;
@@ -201,9 +201,7 @@ export class networkProtocols {
     </div>
 
     <div class = "postFoot">
-        <div class = tagName>
-        ${data.tag}
-        </div>
+       
     </div>
 </div>`;
         html.id = `${data.id}`;
@@ -343,9 +341,7 @@ export class networkProtocols {
     </div>
 
     <div class = "postFoot">
-        <div class = tagName>
-        ${data.tag}
-        </div>
+       
     </div>
 </div>`;
         html.id = `${data.id}`;
