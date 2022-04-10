@@ -250,3 +250,12 @@ footer {
 .stars {
   flex-flow: column;
 }
+
+.bio :hover{
+    color: blue;
+    text-decoration: underline blue;
+}
+
+.bio{
+    text-decoration: underline;
+}
