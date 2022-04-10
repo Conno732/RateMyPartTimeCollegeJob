@@ -129,7 +129,7 @@ export class networkProtocols {
            <div class="postHeadDivider"> <div class = "postTitle">${
              data.title
            }</div>
-            <div class = "companyName">${data.company}</div> </div>
+            <div class = "companyName">| ${data.company}</div> </div>
            <div class="postHeadDivider"> <div class = "pay">$${parseFloat(
              data.pay
            ).toFixed(1)}/hr</div>
@@ -184,12 +184,16 @@ export class networkProtocols {
         html.innerHTML = `<div class = "post">
             
         <div class = "postHead" >
-            <div class = "postTitle">${data.title}</div>
-            <div class = "companyName">${data.company}</div>
-            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+           <div class="postHeadDivider"> <div class = "postTitle">${
+             data.title
+           }</div>
+            <div class = "companyName">| ${data.company}</div> </div>
+           <div class="postHeadDivider"> <div class = "pay">$${parseFloat(
+             data.pay
+           ).toFixed(1)}/hr</div>
             <div class = "avgRating">${parseFloat(data.stars).toFixed(
               1
-            )} Stars</div>
+            )} Stars</div> </div>
         </div>
         
     <div class = "postBody">
@@ -322,12 +326,16 @@ export class networkProtocols {
         html.innerHTML = `<div class = "post">
             
         <div class = "postHead" >
-            <div class = "postTitle">${data.title}</div>
-            <div class = "companyName">${data.company}</div>
-            <div class = "pay">$${parseFloat(data.pay).toFixed(1)}/hr</div>
+           <div class="postHeadDivider"> <div class = "postTitle">${
+             data.title
+           }</div>
+            <div class = "companyName">| ${data.company}</div> </div>
+           <div class="postHeadDivider"> <div class = "pay">$${parseFloat(
+             data.pay
+           ).toFixed(1)}/hr</div>
             <div class = "avgRating">${parseFloat(data.stars).toFixed(
               1
-            )} Stars</div>
+            )} Stars</div> </div>
         </div>
         
     <div class = "postBody">
